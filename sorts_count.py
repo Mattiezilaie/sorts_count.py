@@ -29,7 +29,6 @@ def insertion_count(a_list):
     for index in range(1, len(a_list)):  # loop through list
         key = a_list[index]
         j = index - 1
-
         while j >= 0:
             comparisons += 1  # adds 1 for every comparision
             exchanges += 1
@@ -37,4 +36,5 @@ def insertion_count(a_list):
             j -= 1
             a_list[j]=key
     return comparisons, exchanges
+
 
