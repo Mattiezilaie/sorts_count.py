@@ -17,7 +17,7 @@ def bubble_count(a_list):
             if a_list[i] > a_list[i + 1]:  # compares each item
                 a_list[i], a_list[i + 1] = a_list[i + 1], a_list[i]  # changes the element
                 exchanges += 1
-    return comparisons, exchanges
+        return comparisons, exchanges
 
 
 def insertion_count(a_list):
@@ -27,15 +27,19 @@ def insertion_count(a_list):
     comparisons = 0
     exchanges = 0  # sets comparisons and exchanges
     for index in range(1, len(a_list)):  # loop through list
-        j = index
-        if not (j > 0 and a_list[j] < a_list[j-1]):
+        key = a_list[index]
+        j = index-1
+        while j >= 0:
             comparisons += 1  # adds 1 for every comparision
-        while j > 0 and a_list[j] < a_list[j - 1]:
-            a_list[j], a_list[j-1] = a_list[j-1], a_list[j]  # swapping
-            exchanges += 1
-            comparisons += 1
-            j -= 1
-    return comparisons, exchanges
+            if key < a_list[j]:
+                exchanges += 1
+                a_list[j+1] = a_list[j]  # swapping
+            else:
+                break
+        a_list[j+1] = key
+        return comparisons, exchanges
+
+
 
 
 
