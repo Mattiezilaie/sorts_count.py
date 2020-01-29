@@ -38,6 +38,3 @@ def insertion_count(a_list):
             a_list[j]=key
     return comparisons, exchanges
 
-print(insertion_count(list(range(10, 0, -1))))
-
-print(bubble_count(list(range(10, 0, -1))))
