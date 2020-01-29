@@ -36,5 +36,3 @@ def insertion_count(a_list):
             j -= 1
             a_list[j]=key
     return comparisons, exchanges
-
-
