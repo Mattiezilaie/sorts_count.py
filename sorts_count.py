@@ -22,8 +22,7 @@ def bubble_count(a_list):
 
 def insertion_count(a_list):
     """an insertion sort called insertion_count that sort through a_list
-     counts the comparisions and exchanges between values being sorted """
-
+     counts the comparisons and exchanges between values being sorted """
     comparisons = 0
     exchanges = 0  # sets comparisons and exchanges
     for index in range(1, len(a_list)):  # loop through list
@@ -34,5 +33,5 @@ def insertion_count(a_list):
             exchanges += 1
             a_list[j] = a_list[j-1]  # swapping
             j -= 1
-            a_list[j]=key
+            a_list[j] = key
     return comparisons, exchanges
