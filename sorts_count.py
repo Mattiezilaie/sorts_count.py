@@ -26,18 +26,17 @@ def insertion_count(a_list):
 
     comparisons = 0
     exchanges = 0  # sets comparisons and exchanges
-    for index in range(1, len(a_list)):  # loop through list
+    for index in range(1, a_list):  # loop through list
         key = a_list[index]
-        j = index-1
-        while j >= 0:
+        j = index
+        comparisons += 1
+        while j > 0 and a_list[j-1]> key:
             comparisons += 1  # adds 1 for every comparision
-            if key < a_list[j]:
-                exchanges += 1
-                a_list[j+1] = a_list[j]  # swapping
-            else:
-                break
-        a_list[j+1] = key
-        return comparisons, exchanges
+            a_list[j] = a_list[j-1]  # swapping
+            j = j-1
+            exchanges += 1
+            a_list[j]=key
+    return comparisons, exchanges
 
 
 
