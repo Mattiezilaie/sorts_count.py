@@ -30,7 +30,7 @@ def insertion_count(a_list):
         j = index
         if not (j>0 and a_list[j]<a_list[j-1]):
             comparisons += 1  # adds 1 for every comparision
-        while j >= 0 and a_list[j] > a_list[j - 1]:
+        while j > 0 and a_list[j] < a_list[j - 1]:
             a_list[j], a_list[j - 1] = a_list[j - 1], a_list[j]  # swapping
             exchanges += 1
             comparisons += 1
