@@ -12,7 +12,7 @@ def bubble_count(a_list):
     comparisons = 0
     exchanges = 0  # sets comparisons and exchanges
     for index in range(len(a_list)):  # loop through each item in list
-        for i in range(len(a_list) - 1):
+        for i in range(len(a_list) - index - 1):
             comparisons += 1  # adds 1 for every comparision
             if a_list[i] > a_list[i + 1]:  # compares each item
                 a_list[i], a_list[i + 1] = a_list[i + 1], a_list[i]  # changes the element
